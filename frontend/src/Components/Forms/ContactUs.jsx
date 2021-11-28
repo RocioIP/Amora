@@ -38,8 +38,8 @@ export default function ContactUs() {
       </h1>
       <div className='flex w-10/12 text-principal-gris pb-36 flex-col md:flex-row-reverse gap-5 sm:pb-2'>
         <div className=' w-full gap-y-3 pt-4'>
-          <h1 className='w-full self-center font-medium text-3xl border-b-4 border-gray-600'>
-            Contacto
+          <h1 className='w-full self-center font-medium text-3xl border-b-4 border-gray-300 text-principal-1'>
+            Cúentanos
           </h1>
           <p className='pt-4 text-xl max-w-full text-justify'>
             En Amora estamos encantados de que te pongas en contacto para
@@ -91,7 +91,7 @@ export default function ContactUs() {
             <p className='text-red-500'>{errors.comentarios.message}</p>
           )}
           <input
-            className='button select-none w-1/2 self-center text-center bg-principal-1 text-principal-gris border text-black p-2 hover:bg-principal-2 hover:text-principal-2 transform ease-in duration-200 cursor-pointer'
+            className='button select-none w-1/2 self-center text-center text-xl p-2 text-principal-1 bg-principal-2-hover border-4 hover:bg-principal-1 hover:text-principal-2 transform ease-in duration-200 cursor-pointer'
             type='submit'
             value='Contactar'
           />

@@ -43,7 +43,7 @@ export default function NavBar({ token, setToken }) {
         xl:col-start-2 xl:col-end-10 xl:justify-self-end xl:justify-around
         ${
           mostrarMenu ? 'right-0' : '-right-full'
-        } text-2xl flex flex-col p-5 items-center bg-gray-Primary duration-300 absolute top-20 z-20`}
+        } text-2xl font-normal flex flex-col p-5 items-center bg-gray-Primary duration-300 absolute top-20 z-20`}
         id='menu'
       >
         {MenuElements.map((item) => {
@@ -59,7 +59,7 @@ export default function NavBar({ token, setToken }) {
           );
         })}
 
-        <button className='text-principal-1 text-2xl'>
+        <button className='text-principal-1 text-2xl hover:text-principal-2'>
           <FaShoppingBag />
         </button>
       </ul>

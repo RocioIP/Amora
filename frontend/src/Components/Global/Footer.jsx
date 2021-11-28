@@ -36,7 +36,7 @@ export default function Footer({
   return (
     <footer
       ref={footer}
-      className='text-principal-1 bottom-0 bg-principal-1-hover h-20 absolute w-full flex items-center justify-evenly md:justify-between md:text-2xl md:pl-14 md:pr-16 md:bg-principal-2-hover'
+      className='text-principal-1 bottom-0 bg-principal-1-hover h-28 absolute w-full flex items-center justify-evenly md:justify-between md:text-2xl md:pl-14 md:pr-16 md:bg-principal-2-hover'
     >
       <div className='logo+name h-full flex flex-col items-center justify-center'>
         <Link to='/' className='logo p-1'>
@@ -67,8 +67,7 @@ export default function Footer({
         </ul>
       </div>
       <div className='redes sociales flex flex-col gap-2'>
-        <h3>Síguenos en:</h3>
-        <div className='flex gap-2 text-principal-1'>
+        <div className='flex gap-2 text-principal-1 text-4xl'>
           <a
             rel='noreferrer'
             target='_blank'

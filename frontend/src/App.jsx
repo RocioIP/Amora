@@ -11,6 +11,10 @@ import Footer from './Components/Global/Footer';
 import Colecciones from './Components/Productos/Colecciones';
 import Productos from './Components/Productos/Productos';
 import Nosotros from './Components/Global/Nosotros';
+import Carteras from './Components/Productos/Carteras';
+import Llaveros from './Components/Productos/Llaveros';
+import Pasaportes from './Components/Productos/Pasaportes';
+import Fundas from './Components/Productos/Fundas';
 /* import useUser from './Helpers/Hooks/useUser'; */
 
 function App() {
@@ -19,8 +23,20 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path='/productos'>
+          <Route path='/productos' exact>
             <Productos />
+          </Route>
+          <Route path='/productos/carteras' exact>
+            <Carteras />
+          </Route>
+          <Route path='/productos/llaveros' exact>
+            <Llaveros />
+          </Route>
+          <Route path='/productos/pasaportes' exact>
+            <Pasaportes />
+          </Route>
+          <Route path='/productos/fundas' exact>
+            <Fundas />
           </Route>
           <Route path='/colecciones'>
             <Colecciones />

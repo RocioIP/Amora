@@ -38,58 +38,112 @@ export function Banner() {
 }
 
 export function ProductoNew() {
-  const [OverlayProducts, setOverlayProducts] = useState(false);
+  const [OverlayCarteras, setOverlayCarteras] = useState(false);
+  const [OverlayLlaveros, setOverlayLlaveros] = useState(false);
+  const [OverlayPasaportes, setOverlayPasaportes] = useState(false);
+  const [OverlayFundas, setOverlayFundas] = useState(false);
 
   return (
     <section className='bg-principal-2-hover w-full h-60vh sm:w-full sm:h-50vh'>
-      <div className=' ml-8 pt-10 flex flex-row sm:flex sm:flex-col-4 sm:justify-between sm:gap-10 sm:ml-40 sm:row-start-1  sm:col-start-1  sm:w-5/6 sm:h-80'>
+      <div className=' ml-8 pt-24 flex flex-row sm:flex sm:flex-col-4 sm:justify-between sm:gap-10 sm:ml-40 sm:row-start-1  sm:col-start-1  sm:w-5/6 sm:h-80'>
         <div
           onMouseOver={(e) => {
-            setOverlayProducts(true);
+            setOverlayCarteras(true);
           }}
           onMouseLeave={(e) => {
-            setOverlayProducts(false);
+            setOverlayCarteras(false);
           }}
         >
-          {OverlayProducts && (
-            <div className='animate-fadeIn overlay z-20 absolute  flex flex-col gap-2 items-center justify-center m-auto top-0 bottom-0 left-0 right-0 text-xl font-medium text-white'>
-              <span className='filter drop-shadow-2xl'>
-                <Link className='' to='/carteras'>
-                  Carteras
-                </Link>
-              </span>
+          {OverlayCarteras && (
+            <div className='animate-fadeIn overlay flex flex-col gap-2 text-xl font-medium text-gray-700 '>
+              <Link
+                className='absolute mt-32 ml-24 border-4 bg-principal-1 p-2'
+                to='/productos/carteras'
+              >
+                Carteras
+              </Link>
             </div>
           )}
           <img
             className='animate-TopY w-80 h-60'
             src='../../../Images/carteras.png'
-            alt='cartera'
+            alt='carteras'
           />
         </div>
-        <button>
+        <div
+          onMouseOver={(e) => {
+            setOverlayLlaveros(true);
+          }}
+          onMouseLeave={(e) => {
+            setOverlayLlaveros(false);
+          }}
+        >
+          {OverlayLlaveros && (
+            <div className='animate-fadeIn overlay flex flex-col gap-2 text-xl font-medium text-gray-700 '>
+              <Link
+                className='absolute mt-32 ml-24 border-4 bg-principal-1 p-2'
+                to='/productos/llaveros'
+              >
+                Llaveros
+              </Link>
+            </div>
+          )}
           <img
             className='animate-TopY w-80 h-60'
             src='../../../Images/llaveros.png'
             alt='llaveros'
           />
           <Link className='' to='/productos/llaveros'></Link>
-        </button>
-        <img
-          className='animate-TopY w-96 h-60'
-          src='../../../Images/Pasaportes.png'
-          alt='funda'
-        />
-        {/*  <Link className='' to='/productos/fundas'>
-      </Link>
- */}
-        <img
-          className='animate-TopY w-72 h-56'
-          src='../../../Images/Fundas_gafas.png'
-          alt='pasaporte'
-        />
-        {/* <Link className={`${buttonStyle} `} to='/productos/pasaportes'>
-        Fundas Pasaporte
-      </Link> */}
+        </div>
+        <div
+          onMouseOver={(e) => {
+            setOverlayPasaportes(true);
+          }}
+          onMouseLeave={(e) => {
+            setOverlayPasaportes(false);
+          }}
+        >
+          {OverlayPasaportes && (
+            <div className='animate-fadeIn overlay flex flex-col gap-2 text-xl font-medium text-gray-700 '>
+              <Link
+                className='absolute mt-32 ml-20 border-4 bg-principal-1 p-2'
+                to='/productos/pasaportes'
+              >
+                Fundas pasaporte
+              </Link>
+            </div>
+          )}
+          <img
+            className='animate-TopY w-96 h-60'
+            src='../../../Images/Pasaportes.png'
+            alt='fundas de pasaporte'
+          />
+        </div>
+
+        <div
+          onMouseOver={(e) => {
+            setOverlayFundas(true);
+          }}
+          onMouseLeave={(e) => {
+            setOverlayFundas(false);
+          }}
+        >
+          {OverlayFundas && (
+            <div className='animate-fadeIn overlay flex flex-col gap-2 text-xl font-medium text-gray-700 '>
+              <Link
+                className='absolute mt-32 ml-24 border-4 bg-principal-1 p-2'
+                to='/productos/fundas'
+              >
+                Fundas de Gafas
+              </Link>
+            </div>
+          )}
+          <img
+            className='animate-TopY w-72 h-56'
+            src='../../../Images/Fundas_gafas.png'
+            alt='fundas de gafas'
+          />
+        </div>
       </div>
     </section>
   );
