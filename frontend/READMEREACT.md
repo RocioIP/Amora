@@ -1,9 +1,3 @@
-## Proyecto PERFECT RENTER
+## Proyecto Amora
 
-Aquí encontrarás:
-
-- Variables
-- Funciones
-- Componentes
-
-Con toda su explicación y lo necesario para utilizarlas.
+App web del proyecto amora, venta de productos de artesanía en cuero.
